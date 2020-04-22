@@ -1,0 +1,38 @@
+$colorred: #e3000f;
+$colorblue: #004389;
+
+@mixin LineBeforeTitle {
+    content: "";
+    display: block;
+    height: 140px;
+    width: 4px;
+    background-color: $colorred;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: -37px;
+}
+
+@mixin Title {
+    margin: 253px 0 50px;
+    font-size: 40px;
+    line-height: 50px;
+    position: relative;
+
+    span {
+        color: #eb0a19;
+    }
+}
+
+@mixin videoBtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+@mixin videoSubtitle {
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 40px;
+
+}
