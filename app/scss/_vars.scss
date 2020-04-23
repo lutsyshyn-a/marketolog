@@ -7,10 +7,7 @@ $colorblue: #004389;
     height: 140px;
     width: 4px;
     background-color: $colorred;
-    z-index: 10;
     position: absolute;
-    bottom: 0;
-    left: -37px;
 }
 @mixin bgParameters {
     background-position: center;

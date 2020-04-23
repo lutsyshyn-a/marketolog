@@ -107,6 +107,8 @@ body {
 .content {
     .header-title::before {
         @include LineBeforeTitle;
+        bottom: 0;
+        left: -37px;
     }
 
     .header-title {
@@ -280,16 +282,24 @@ body {
         }
 
         .work-title {
-            margin-bottom: 25px;
             @include Title;
+            margin-bottom: 25px;
         }
 
         .work-subtitle {
+            position: relative;
             font-size: 20px;
             font-weight: 400;
             line-height: 30px;
             letter-spacing: 1;
             margin-bottom: 70px;
+        }
+
+        .work-subtitle::before {
+            @include LineBeforeTitle;
+            bottom: 3px;
+            left: -37px;
+            height: 170px;
         }
 
 
@@ -494,31 +504,33 @@ body {
     margin: 0 auto;
     position: relative;
 
-    .reviews-title {
-        padding-bottom: 160px;
-    }
-
     .slider-reviews {
-        padding-top: 100px;
+        box-sizing: border-box;
+        padding-top: 55px;
         display: flex;
         justify-content: space-between;
 
+        .slick-track {
+            padding-top: 160px;
+
+        }
+
         .slider-reviews__item {
             position: relative;
+            margin-bottom: 50px;
+            box-sizing: border-box;
             padding: 90px 33px;
             max-width: 424px;
-            height: 456px;
+            height: 540px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             font-size: 20px;
             line-height: 30px;
 
             .slider-reviews__icon {
-                //position: absolute;
-                //top: -55px;
-                // left: 140px;
-                margin-left: 80px;
-                margin-top: -145px;
-                z-index: 100;
+                position: absolute;
+                top: -55px;
+                left: 55px;
+                z-index: 1000;
             }
 
             .slider-reviews__author {
@@ -529,9 +541,10 @@ body {
         }
 
     }
-
+}
     .button__more-video {
         margin-top: 80px;
+        margin-left: 36%;
 
         .watch-video {
             background-color: $colorblue;
@@ -543,18 +556,43 @@ body {
 
     .next--reviews {
         position: absolute;
-        top: 450px;
+        top: 500px;
         right: -100px;
     }
 
     .prev--reviews {
         position: absolute;
-        top: 450px;
+        top: 500px;
+        left: -100px;
+
+    }
+
+    .slider-partners {
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+    }
+
+    .slide-parts {
+        position: relative;
+    }
+
+    .next--parts {
+        position: absolute;
+        top: 500px;
+        right: 0;
+    }
+
+    .prev--parts {
+        position: absolute;
+        top: 500px;
         left: -100px;
     }
-}
 
 
 
 
-@import "media";
+
+    @import "media";
