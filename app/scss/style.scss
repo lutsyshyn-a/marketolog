@@ -36,9 +36,7 @@ body {
 
 .header {
     background: url('../img/pictures/header-bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include bgParameters;
     background-color: #fff;
     height: 1093px;
     color: #ffffff;
@@ -81,8 +79,6 @@ body {
         .faq {
             margin: 0 42px 0 42px;
         }
-
-
     }
 
     .button-head {
@@ -159,18 +155,15 @@ body {
 
             .n {
                 cursor: pointer;
-
+                position: absolute;
+                top: 115px;
             }
 
             .prev {
-                position: absolute;
-                top: 115px;
                 left: 0;
             }
 
             .next {
-                position: absolute;
-                top: 115px;
                 right: 0;
             }
 
@@ -180,7 +173,6 @@ body {
                 display: flex;
                 justify-content: space-around;
 
-                // margin-left: 100px;
                 .slider-item {
                     .slider-item__icon {
                         img {
@@ -211,7 +203,7 @@ body {
 }
 
 .solutions {
-    padding-bottom: 120px;
+    padding-bottom: 200px;
 
     .container {
         padding-top: 80px;
@@ -271,15 +263,23 @@ body {
     color: #ffffff;
 
     .our-work__content {
-        height: 920px;
         background-image: url('../img/pictures/work-bg.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include bgParameters;
         padding-left: 53%;
+        padding-top: 300px;
+
+        .watch-video {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 280px;
+
+            .video__subtitle {
+                @include videoSubtitle;
+            }
+        }
 
         .work-title {
-            padding-top: 420px;
             margin-bottom: 25px;
             @include Title;
         }
@@ -292,15 +292,7 @@ body {
             margin-bottom: 70px;
         }
 
-        .watch-video {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
 
-            .video__subtitle {
-                @include videoSubtitle;
-            }
-        }
     }
 
     .container {
@@ -420,15 +412,30 @@ body {
 
         .request-form__title {
             text-align: center;
+            font-size: 25px;
+            font-weight: 700;
+            color: $colorblue;
+            padding-bottom: 20px;
         }
 
         .request-form__subtitle {
             text-align: center;
+            font-size: 20px;
         }
 
         .form-container {
             margin-top: 30px;
             max-width: 1650px;
+
+            input {
+                border: none;
+                outline: none;
+                font-size: 18px;
+            }
+
+            .input-field {
+                border-bottom: 1px solid #333333;
+            }
 
             .input-field {
                 max-width: 400px;
@@ -443,19 +450,109 @@ body {
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 40px;
-                ;
                 width: 370px;
                 height: 60px;
                 background-color: $colorblue;
                 color: #ffffff;
+                cursor: pointer;
+            }
+
+            .form-btn:hover {
+                background-color: $colorred;
             }
         }
     }
 }
 
+.fa-user-alt {
+    @include formIcons;
+}
 
+.fa-user-alt::before {
+    @include formIconsBefore;
+}
 
+.fa-phone-volume {
+    @include formIcons;
+}
 
+.fa-phone-volume::before {
+    @include formIconsBefore;
+
+}
+
+.fa-envelope {
+    @include formIcons;
+}
+
+.fa-envelope:before {
+    @include formIconsBefore;
+}
+
+.reviews {
+    max-width: 1390px;
+    margin: 0 auto;
+    position: relative;
+
+    .reviews-title {
+        padding-bottom: 160px;
+    }
+
+    .slider-reviews {
+        padding-top: 100px;
+        display: flex;
+        justify-content: space-between;
+
+        .slider-reviews__item {
+            position: relative;
+            padding: 90px 33px;
+            max-width: 424px;
+            height: 456px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+            line-height: 30px;
+
+            .slider-reviews__icon {
+                //position: absolute;
+                //top: -55px;
+                // left: 140px;
+                margin-left: 80px;
+                margin-top: -145px;
+                z-index: 100;
+            }
+
+            .slider-reviews__author {
+                color: $colorblue;
+                font-weight: 500;
+                padding-top: 30px;
+            }
+        }
+
+    }
+
+    .button__more-video {
+        margin-top: 80px;
+
+        .watch-video {
+            background-color: $colorblue;
+            width: 340px;
+            height: 60px;
+            color: #ffffff;
+        }
+    }
+
+    .next--reviews {
+        position: absolute;
+        top: 450px;
+        right: -100px;
+    }
+
+    .prev--reviews {
+        position: absolute;
+        top: 450px;
+        left: -100px;
+    }
+}
 
 
 
