@@ -29,7 +29,7 @@
           </div>
 
           <div class="button-head">
-            <button class="menu-btn">Свяжитесь со мной</button>
+            <button class="menu-btn" onclick="bopen();">Свяжитесь со мной</button>
           </div>
           <div class="lang">
             <span>RU</span>
@@ -42,8 +42,8 @@
         <h1 class="header-title">
           <span>Эффективный</span> директор <br> по <span>маркет</span>ингу <br>для вашего бизнеса
         </h1>
-        <div class="watch-video">
-          <a href="#"><img src="img/icons/video.png" alt="watch"></a>
+        <div class="watch-video" onclick="bopen();">
+          <a href="#" id="open-btn"><img src="img/icons/video.png" alt="watch"></a>
           <h3 class="video__subtitle">Смотреть видео-приветствие</h3>
         </div>
         <div class="arrows animated fadeInDown infinite slow">
@@ -125,8 +125,7 @@
     <div class="container">
       <div class="solutions-box">
         <div class="solution-items">
-          <div class="solution-item">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
+          <div class="solution-item actives">
             <p class="solution-text">
               Найм директора по марктетингу - сложный и дорогостоящий процесс.
             </p>
@@ -138,10 +137,7 @@
         </div>
 
         <div class="solution-items">
-          <div class="solution-item" id="ddd">
-            <img src="img/icons/arrow-solutions.svg" alt="arrow" class="solution-arrow--hover"
-              id="solution-arrow--hover">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
+          <div class="solution-item ">
             <p class="solution-text">
               Кандидата на позицию директора по маркетингу трудно оценить с точки зрения компетенций.
             </p>
@@ -154,7 +150,6 @@
 
         <div class="solution-items">
           <div class="solution-item">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
             <p class="solution-text">
               Ошибка выбора кандидата будет стоить компании большого количества времени и бюджетов, а возможно и
               репутации.
@@ -168,7 +163,6 @@
 
         <div class="solution-items">
           <div class="solution-item">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
             <p class="solution-text">
               У собственника бизнеса и директора по маркетингу, как правило, разные взгляды на вопросы ввиду разного
               опыта.
@@ -182,7 +176,6 @@
 
         <div class="solution-items">
           <div class="solution-item">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
             <p class="solution-text">
               Директору по маркетингу "в штате" нужна долгая адаптация к продукту Компании.
             </p>
@@ -195,7 +188,6 @@
 
         <div class="solution-items">
           <div class="solution-item">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
             <p class="solution-text">
               Для ТОП-менеджера необходимо создавать правильную инфраструктуру - отделы, подразделения, выделять
               огромные бюджеты.
@@ -209,7 +201,6 @@
 
         <div class="solution-items">
           <div class="solution-item">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
             <p class="solution-text">
               Больничные и отпускные забирают много эффективного времени.
             </p>
@@ -222,7 +213,6 @@
 
         <div class="solution-items">
           <div class="solution-item">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
             <p class="solution-text">
               Нужно обеспечить рабочее место - стол, стул, кабинет, ноутбук.
             </p>
@@ -235,7 +225,7 @@
 
         <div class="solution-items">
           <div class="solution-item">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
+
             <p class="solution-text">
               У штатных экспертов достаточно быстро замыливается глаз на продукт, которым они "живут".
             </p>
@@ -248,7 +238,7 @@
 
         <div class="solution-items">
           <div class="solution-item">
-            <img src="img/icons/solution-arrow-down.svg" alt="arrow" class="solution-arrow">
+
             <p class="solution-text">
               Слабый "морально", наемный маркетинг-специалист может позволить собственнику "играть в маркетинг", то есть
               управлять маркетинг-стратегией самостоятельно (я собственник, я так вижу), вне понятий "правильно" и
@@ -272,7 +262,7 @@
         В этом видео основатель компании "Маркетолог#2" Юрий Будилов <br> поэтапно рассказывает весь путь работы
         компании с бизнесом, <br> то есть с клиентскими проектами.
       </p>
-      <div class="watch-video">
+      <div class="watch-video" onclick="bopen();">
         <a href="#"><img src="img/icons/video.png" alt="watch"></a>
         <h3 class="video__subtitle">Смотреть видео об этапах работы</h3>
       </div>
@@ -300,38 +290,39 @@
 
           <div class="steps-item steps-item--right">
             <img src="img/icons/step-2.png" alt="img" class="steps-img">
-            <h3 class="steps-item__subtitle"><span>Знакомство</span> <br> с проектом, компанией, <br> бизнесом</h3>
+            <h3 class="steps-item__subtitle"><span>Консультация —</span> <br>исследование
+              <br>проблемы/задачи</h3>
           </div>
 
           <div class="steps-item steps-item--right">
             <img src="img/icons/step-3.png" alt="img" class="steps-img">
-            <h3 class="steps-item__subtitle"><span>Знакомство</span> <br> с проектом, компанией, <br> бизнесом</h3>
+            <h3 class="steps-item__subtitle"><span>Маркетинг-аудит —</span> <br> проекта, <br> процессов, компании</h3>
           </div>
 
           <div class="steps-item steps-item--right">
             <img src="img/icons/step-4.png" alt="img" class="steps-img">
-            <h3 class="steps-item__subtitle"><span>Знакомство</span> <br> с проектом, компанией, <br> бизнесом</h3>
+            <h3 class="steps-item__subtitle"><span>Стратегия — </span> <br> проработка <br> road map до мелочей</h3>
           </div>
         </div>
         <div class="steps-box steps-box--last-line">
           <div class="steps-item steps-item--left">
             <img src="img/icons/step-8.png" alt="img" class="steps-img">
-            <h3 class="steps-item__subtitle"><span>Знакомство</span> <br> с проектом, компанией, <br> бизнесом</h3>
+            <h3 class="steps-item__subtitle"><span>Пост-поддержка — </span> <br>чтобы результат<br> был долгим!</h3>
           </div>
 
           <div class="steps-item steps-item--left">
             <img src="img/icons/step-7.png" alt="img" class="steps-img">
-            <h3 class="steps-item__subtitle"><span>Знакомство</span> <br> с проектом, компанией, <br> бизнесом</h3>
+            <h3 class="steps-item__subtitle"><span>Фиксируем результат!</span> <br>— с гарантией <br> выполнения</h3>
           </div>
 
           <div class="steps-item steps-item--left">
             <img src="img/icons/step-6.png" alt="img" class="steps-img">
-            <h3 class="steps-item__subtitle"><span>Знакомство</span> <br> с проектом, компанией, <br> бизнесом</h3>
+            <h3 class="steps-item__subtitle"><span>Проектное управление —</span> <br>с погружением<br> "под ключ"</h3>
           </div>
 
           <div class="steps-item steps-item--left">
             <img src="img/icons/step-5.png" alt="img" class="steps-img">
-            <h3 class="steps-item__subtitle"><span>Знакомство</span> <br> с проектом, компанией, <br> бизнесом</h3>
+            <h3 class="steps-item__subtitle"><span>Планирование — </span> <br> результатов,<br> бпостановка целей</h3>
           </div>
         </div>
         <div class="in-numbers">
@@ -461,48 +452,172 @@
   </section>
 
   <section class="slider-partners">
+    <div class="section-titles partners-title">
+      <span>Наши</span> друзья, клиенты и партнеры
+    </div>
     <div class="container slide-parts">
       <div class="n prev--parts"><img src="img/icons/prev.png" alt="prev"></div>
-   
-    <div class="slider-partners__inner">
-      
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
+
+      <div class="slider-partners__inner">
+
+        <div class="slider-partners__item">
+          <img src="img/icons/partners-item1.png" alt="">
+        </div>
+        <div class="slider-partners__item">
+          <img src="img/icons/partners-item2.png" alt="">
+        </div>
+        <div class="slider-partners__item">
+          <img src="img/icons/partners-item3.png" alt="">
+        </div>
+        <div class="slider-partners__item">
+          <img src="img/icons/partners-item4.png" alt="">
+        </div>
+
+        <div class="slider-partners__item">
+          <img src="img/icons/partners-item5.png" alt="">
+        </div>
+        <div class="slider-partners__item">
+          <img src="img/icons/partners-item6.png" alt="">
+        </div>
+        <div class="slider-partners__item">
+          <img src="img/icons/partners-item7.png" alt="">
+        </div>
+        <div class="slider-partners__item">
+          <img src="img/icons/partners-item8.png" alt="">
+        </div>
+        <div class="slider-partners__item">
+          <img src="img/icons/partners-item9.png" alt="">
+        </div>
       </div>
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
+      <div class="n next--parts slick-arrow"><img src="img/icons/next.png" alt="next"></div>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="questions">
+    <div class="container">
+      <div class="section-titles solutions-title">
+        <span>Часто</span> задаваемые вопросы
       </div>
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
+      <div class="titles-subtitle">
+        Кликайте на интересующий вопрос слева - читайте ответ справа!
       </div>
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
-      </div>
-      
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
-      </div>
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
-      </div>
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
-      </div>
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
-      </div>
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
-      </div>
-      <div class="slider-partners__item">
-        <img src="img/icons/partners-item1.png" alt="">
+      <div class="questions__block">
+        <div class="questions__items">
+          <div class="questions__item item0 active">
+            <h3>Так вы занимаетесь рекламой или продвижением?
+            </h3>
+          </div>
+
+          <div class="questions__item item1">
+            <h3>Можете помочь с рекламой в интернете?
+            </h3>
+          </div>
+
+          <div class="questions__item  item2">
+            <h3>Сколько стоит ваша работа?
+            </h3>
+          </div>
+
+          <div class="questions__item item3">
+            <h3>Сколько проектов вы уже выполнили?
+
+            </h3>
+          </div>
+
+          <div class="questions__item item4">
+            <h3>Мне не нужны сотрудники в штат - как быть?
+            </h3>
+          </div>
+
+          <div class="questions__item item5">
+            <h3>Так вы занимаетесь рекламой или продвижением?
+            </h3>
+          </div>
+
+          <div class="questions__item item6">
+            <h3>Как давно существует ваша компания?
+            </h3>
+          </div>
+
+          <div class="questions__item item7">
+            <h3>Нам нужно провести ребрендинг
+            </h3>
+          </div>
+
+          <div class="questions__item item8">
+            <h3>Есть что-то, чем вы не занимаетесь?
+            </h3>
+          </div>
+
+          <div class="questions__item item9">
+            <h3>Наемный сотрудник работает на стороне компании, у агентства хуже качество?
+            </h3>
+          </div>
+        </div>
+        <div class="questions__answer">
+          <p class="answer">Увы, из-за повального нашествия "гуру инфобизнеса" многие понятия и термины в реальном мире
+            часто путают с вымыслом.</p>
+          <p class="answer">Управление Маркетингом - это построение бизнес-процессов, Promotion (продвижение) - часть
+            маркетинга, а реклама - часть продвижения.</p>
+          <p class="answer">Мы вместе с собственниками/инвесторами выстраиваем бизнес-процессы - конечно же, включая
+            вопросы позиционирования, продвижения - и рекламы.</p>
+          <p class="answer">Если по-порядку - то это: маркетинг-аудит, согласование концепции развития, утверждение
+            стратегии, бюджетирование и активные действия.
+            Однако, все может отличаться - в зависимости от особенностей и задач Вашего бизнеса.</p>
+        </div>
       </div>
     </div>
-    <div class="n next--parts slick-arrow"><img src="img/icons/next.png" alt="next"></div> 
-  </div>
-  </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="foter__inner">
+        <div class="footer__logo"><a href="#"><img src="img/icons/logo.png" alt="logo"></a></div>
+        <div class="contacts">
+          <div class="contacts__item">Юридическая поддержка</div>
+          <div class="contacts__item contacts__item--position">Киев, Глубочицкая, 32В</div>
+          <div class="contacts__item contacts__item--mail">marketolog2.com</div>
+        </div>
+        <div class="footer__social">
+          <a class="footer__fb" href="#"><img src="img/icons/fb.png" alt="fb"></a>
+          <a class="footer__yt" href="#"><img src="img/icons/youtube.png" alt="yt"></a>
+        </div>
+        <div class="arrows--up animated fadeInUp infinite slow">
+          <img src="img/icons/arrows__footer.png" alt="arrows">
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- Форма впливаючого вікна -->
+  <!-- Форма впливаючого вікна -->
+
+  <section id="window" class="window" style="display: none;">
+    <button class="close-btn" id="close-btn" onclick="bclose();"><img src="img/icons/close.png" alt=""></button>
+
+    <div class=" request-form window-form">
+
+      <div class="request-form__title">Подайте заявку сейчас и получите специальное предложение!</div>
+      <div class="request-form__subtitle">Индивидуальная встреча-консультация с экспертом, с целью оптимизации
+        маркетинг-процессов в Вашем бизнесе</div>
+      <div class="container form-container">
+        <form action="">
+          <i class="fas fa-user-alt"></i><input class="input-field input-name" type="text" placeholder="Ваше имя"><i
+            class="fas fa-phone-volume"></i>
+          <input class="input-field input-tel" type="tel" placeholder="Ваш Телефон*"><i class="far fa-envelope "></i>
+          <input class="input-field input-email" type="email" placeholder="Ваш e-mail">
+          <button class="form-btn">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bPopup/0.11.0/jquery.bpopup.min.js"></script>
+  <script src="https://vk.com/js/api/openapi.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>
