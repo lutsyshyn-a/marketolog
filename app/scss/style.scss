@@ -127,6 +127,7 @@ body {
         @include Title;
 
         &::before {
+
             @include LineBeforeTitle;
             bottom: 0;
             left: -37px;
@@ -284,17 +285,10 @@ body {
                 }
             }
 
-
-        }
-
-        .actives {
-            position: relative;
-
-
-            .actives::before {
+            .active::before {
                 content: '';
                 position: absolute;
-                background-image: url(../img/icons/questions_arr_r.png);
+                background-image: url('../img/icons/questions_arr_r.png');
                 background-position: center;
                 background-repeat: no-repeat;
                 width: 30px;
@@ -302,7 +296,10 @@ body {
                 top: 33%;
                 left: -20px;
             }
+
         }
+
+
     }
 }
 
